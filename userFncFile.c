@@ -12,6 +12,11 @@
 #include "inc/timer_api1.h"
 #include "inc/EMICBus.h"
 
+/* User Variables */
+int16_t Maximo = 45;
+int16_t Minimo = 40;
+int16_t Actual;
+
 void eI2C(char* tag, const streamIn_t* const msg)
 {
     if (strncmp(tag, "TEMP", 4) == 0)
